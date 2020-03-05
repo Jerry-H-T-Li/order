@@ -1,0 +1,15 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: api-geteway
+zuul:
+  routes:
+    logon-service:
+      path: /order-auth/**
+      serviceId: order-auth
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
